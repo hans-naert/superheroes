@@ -4,11 +4,13 @@ import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SuperheroProfileComponent } from './superhero-profile/superhero-profile.component';
+import { SuperheroProfileFooterComponent } from './superhero-profile-footer/superhero-profile-footer.component';
 
 
 @NgModule({
   declarations: [
-    SuperheroProfileComponent
+    SuperheroProfileComponent,
+    SuperheroProfileFooterComponent
   ],
   imports: [
     CommonModule,
@@ -16,6 +18,6 @@ import { SuperheroProfileComponent } from './superhero-profile/superhero-profile
     MatCardModule,
     MatToolbarModule
   ],
-  exports: [SuperheroProfileComponent]
+  exports: [SuperheroProfileComponent, SuperheroProfileFooterComponent]
 })
 export class SuperheroesMaterialDesignModule { }
