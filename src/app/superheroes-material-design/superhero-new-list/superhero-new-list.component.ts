@@ -9,9 +9,10 @@ import { SuperheroDataService } from '../../data-services/superhero-data.service
 })
 export class SuperheroNewListComponent {
 
-  superheroes: Array<Superhero>;
+  superheroes: Array<Superhero>=[];
+
   constructor(superheroDataService: SuperheroDataService) {
-    this.superheroes = superheroDataService.getSuperheroes();
+    superheroDataService.getSuperheroesObservable().subscribe(val => this.superheroes.push(val));
   }
 
   printSuperhero(hero: Superhero) {
