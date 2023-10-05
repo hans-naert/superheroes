@@ -6,11 +6,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SuperheroProfileComponent } from './superhero-profile/superhero-profile.component';
 import { SuperheroProfileFooterComponent } from './superhero-profile-footer/superhero-profile-footer.component';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     SuperheroProfileComponent,
-    SuperheroProfileFooterComponent
+    SuperheroProfileFooterComponent,
+    HomeComponent
   ],
   imports: [
     CommonModule,
@@ -19,6 +21,6 @@ import { FormsModule } from '@angular/forms';
     MatToolbarModule,
     FormsModule
   ],
-  exports: [SuperheroProfileComponent, SuperheroProfileFooterComponent]
+  exports: [SuperheroProfileComponent, SuperheroProfileFooterComponent, HomeComponent]
 })
 export class SuperheroesMaterialDesignModule { }
