@@ -9,7 +9,5 @@ import { Superhero } from './superheroes-material-design/superhero-profile/super
 export class AppComponent {
   title = 'superheroes';
 
-  printSuperhero(hero: Superhero) {
-    console.log(hero); // print the received event object.
-  }
+ 
 }

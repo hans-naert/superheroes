@@ -7,12 +7,14 @@ import { SuperheroProfileComponent } from './superhero-profile/superhero-profile
 import { SuperheroProfileFooterComponent } from './superhero-profile-footer/superhero-profile-footer.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
+import { SuperheroNewListComponent } from './superhero-new-list/superhero-new-list.component';
 
 @NgModule({
   declarations: [
     SuperheroProfileComponent,
     SuperheroProfileFooterComponent,
-    HomeComponent
+    HomeComponent,
+    SuperheroNewListComponent
   ],
   imports: [
     CommonModule,
@@ -21,6 +23,6 @@ import { HomeComponent } from './home/home.component';
     MatToolbarModule,
     FormsModule
   ],
-  exports: [SuperheroProfileComponent, SuperheroProfileFooterComponent, HomeComponent]
+  exports: [SuperheroProfileComponent, SuperheroProfileFooterComponent, HomeComponent, SuperheroNewListComponent]
 })
 export class SuperheroesMaterialDesignModule { }

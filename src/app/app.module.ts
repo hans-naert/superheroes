@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SuperheroesMaterialDesignModule } from './superheroes-material-design/superheroes-material-design.module';
 
+import {SuperheroDataService} from './data-services/superhero-data.service'
+
 @NgModule({
   declarations: [
     AppComponent
@@ -16,7 +18,7 @@ import { SuperheroesMaterialDesignModule } from './superheroes-material-design/s
     BrowserAnimationsModule,
     SuperheroesMaterialDesignModule
   ],
-  providers: [],
+  providers: [SuperheroDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

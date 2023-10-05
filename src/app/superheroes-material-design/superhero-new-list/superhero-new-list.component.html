@@ -1,0 +1,6 @@
+<li *ngFor="let superhero of superheroes">
+    <app-superhero-profile [name]="superhero.name" [firstAppearance]="superhero.firstAppearance" [lives-in]="superhero.livesIn" (flyWithSuperhero)="printSuperhero($event)">
+        <app-superhero-profile-footer>
+        </app-superhero-profile-footer>
+    </app-superhero-profile>
+</li>
