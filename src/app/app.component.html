@@ -1,6 +1,6 @@
 <router-outlet></router-outlet>
 <span>{{ title }} is the name of the app</span>
-<app-superhero-profile name="Superman" [firstAppearance]="1990" lives-in="Kortrijk">
+<app-superhero-profile name="Superman" [firstAppearance]="1990" lives-in="Kortrijk" (flyWithSuperhero)="printSuperhero($event)">
     <app-superhero-profile-footer>
     </app-superhero-profile-footer>
 </app-superhero-profile>

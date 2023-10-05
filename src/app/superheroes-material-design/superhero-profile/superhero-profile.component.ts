@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges, Output, EventEmitter } from '@angular/core';
 import SuperheroText from '../utilities/superhero-text';
 
 @Component({
@@ -7,7 +7,7 @@ import SuperheroText from '../utilities/superhero-text';
   styleUrls: ['./superhero-profile.component.css'],
   providers: [SuperheroText]
 })
-export class SuperheroProfileComponent {
+export class SuperheroProfileComponent implements OnChanges {
   @Input() name:string="";
   
   private _firstAppearance: number=0;
@@ -24,4 +24,24 @@ export class SuperheroProfileComponent {
 
   @Input("lives-in") livesIn: string="";
 
+  @Output() flyWithSuperhero = new EventEmitter<Superhero>();
+
+  returnSuperheroData(){
+    let hero = {
+    name: this.name,
+    livesIn: this.livesIn,
+    firstAppearance: this._firstAppearance
+    };
+    this.flyWithSuperhero.emit(hero);
+    }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(changes);
+  }
+
+}
+export type Superhero = {
+  name: string;
+  firstAppearance: number;
+  livesIn: string;
 }
