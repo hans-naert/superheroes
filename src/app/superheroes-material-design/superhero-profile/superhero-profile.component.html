@@ -1,10 +1,10 @@
 <mat-card class="example-card">
-    <h1>{{name}}</h1>
+    <h1  [ngStyle]="styles">{{name}}</h1>
     <p>
         Lives in {{livesIn}}. He is a friendly neighbourhood superhero.
         First appearance in {{firstAppearance}}.
     </p>
-    <div>
+    <div [ngClass]="cssClasses">
         <strong>Superpowers</strong>
         <li>
             Spiderman can shoot web

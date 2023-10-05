@@ -3,3 +3,19 @@
     margin: 50px;
     padding:50px;
 }
+
+.show-border
+{
+  border: black;
+  border-style: dashed;
+}
+
+.show-bg-color
+{
+  background: lightcyan;
+}
+
+.apply-margin
+{
+  margin: 10px;
+}

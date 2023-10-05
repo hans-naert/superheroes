@@ -8,32 +8,48 @@ import SuperheroText from '../utilities/superhero-text';
   providers: [SuperheroText]
 })
 export class SuperheroProfileComponent implements OnChanges {
-  @Input() name:string="";
-  
-  private _firstAppearance: number=0;
-  @Input() 
+
+  cssClasses: { [key: string]: boolean } = {
+    'show-border': true,
+    'show-bg-color': true,
+    'apply-margin': true
+  }
+
+  fontSize = "30";
+  heroWeight: number = 181;
+
+  styles: { [key: string]: string } = {
+    'font-size.pt': this.fontSize,
+    'color': this.heroWeight > 180 ? 'red' : 'black',
+    'font-weight': this.heroWeight > 180 ? 'bold' : 'normal',
+    'text-decoration': this.heroWeight > 180 ? 'underline' : 'none'
+  }
+
+  @Input() name: string = "";
+
+  private _firstAppearance: number = 0;
+  @Input()
   set firstAppearance(val: number) {
-    if(val > 1950) {
+    if (val > 1950) {
       this._firstAppearance = val;
     }
-    else
-    {
+    else {
       console.error("Superhero too old!");
     }
   }
 
-  @Input("lives-in") livesIn: string="";
+  @Input("lives-in") livesIn: string = "";
 
   @Output() flyWithSuperhero = new EventEmitter<Superhero>();
 
-  returnSuperheroData(){
+  returnSuperheroData() {
     let hero = {
-    name: this.name,
-    livesIn: this.livesIn,
-    firstAppearance: this._firstAppearance
+      name: this.name,
+      livesIn: this.livesIn,
+      firstAppearance: this._firstAppearance
     };
     this.flyWithSuperhero.emit(hero);
-    }
+  }
 
   ngOnChanges(changes: SimpleChanges): void {
     console.log(changes);
