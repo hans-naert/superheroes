@@ -9,6 +9,8 @@ import SuperheroText from '../utilities/superhero-text';
 })
 export class SuperheroProfileComponent implements OnChanges {
 
+  public showContactDetails: boolean =false;
+
   cssClasses: { [key: string]: boolean } = {
     'show-border': true,
     'show-bg-color': true,

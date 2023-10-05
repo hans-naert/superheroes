@@ -2,12 +2,17 @@
 <label for="name-input">Name:</label>
 <input type="text" id="name-input" [(ngModel)]="name" placeholder="Enter superhero name" title="Superhero Name"/>
 </p>
+<p>
+    <input type="checkbox" [(ngModel)]="showContactDetails">
+
+</p>
 <mat-card class="example-card">
     <h1  [ngStyle]="styles">{{name}}</h1>
     <p>
         Lives in {{livesIn}}. He is a friendly neighbourhood superhero.
         First appearance in {{firstAppearance}}.
     </p>
+    <div *ngIf="showContactDetails; then contactDetails else hiddenText"></div>
     <div [ngClass]="cssClasses">
         <strong>Superpowers</strong>
         <li>
@@ -24,3 +29,5 @@
 
     <ng-content></ng-content>
 </mat-card>
+<ng-template #contactDetails>Doorniksesteenweg 145</ng-template>
+<ng-template #hiddenText>Hidden</ng-template>
