@@ -26,7 +26,22 @@
     <mat-option value="os">Outer space</mat-option>
     </mat-select>
     </mat-form-field>
-    </div>
+   
 
-    <strong>Superhero comes from " {{country}} "</strong>
+    <strong>Superhero comes from " {{country}} "</strong> 
+</div>
+
+1. <div>
+    <!-- Appearance: Outline -->
+    <mat-form-field appearance="outline">
+    <mat-label>Special Powers</mat-label>
+    <mat-select [(value)]="powers" multiple>
+     <mat-option>None</mat-option>
+     <mat-option value="fly">fly</mat-option>
+     <mat-option value="hammer">wield hammer</mat-option>
+     <mat-option value="power">grow powerful</mat-option>
+     </mat-select>
+     </mat-form-field>
+     <strong> My superhero can " {{powers}} "</strong>
+     </div>
 <!--/form-->
