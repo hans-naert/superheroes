@@ -1,17 +1,17 @@
 <p>create-superhero works!</p>
-<!--form #superheroForm="ngForm"-->
+<form #superheroForm="ngForm">
 <div>
     <mat-form-field appearance="outline">
         <mat-label>Superhero Name</mat-label>
-        <input type="text" matInput required placeholder="A name to be remembered"/>
+        <input type="text" matInput required placeholder="A name to be remembered" [(ngModel)]="superhero.name" name="name"/>
         <mat-hint>Enter name</mat-hint>
     </mat-form-field>
     </div>
     <div>
     <mat-form-field appearance="outline">
-        <mat-label>Powers</mat-label>
+        <mat-label>Details</mat-label>
         <textarea cdkAutosizeMinRows="4"
-        cdkAutosizeMaxRows="10" rows="6" matInput></textarea>
+        cdkAutosizeMaxRows="10" rows="6" matInput [(ngModel)]="superhero.details" name="details"></textarea>
         <mat-hint>Explain superhero powers</mat-hint>
     </mat-form-field>
 </div>
@@ -19,7 +19,7 @@
     <!-- Appearance: Outline -->
     <mat-form-field appearance="outline">
     <mat-label>Country</mat-label>
-    <mat-select [(value)]="country">
+    <mat-select [(value)]="superhero.country" name="country">
     <mat-option>None</mat-option>
     <mat-option value="in">India</mat-option>
     <mat-option value="us">United States</mat-option>
@@ -28,20 +28,29 @@
     </mat-form-field>
    
 
-    <strong>Superhero comes from " {{country}} "</strong> 
+    <strong>Superhero comes from " {{superhero.country}} "</strong> 
 </div>
 
-1. <div>
+ <div>
     <!-- Appearance: Outline -->
     <mat-form-field appearance="outline">
     <mat-label>Special Powers</mat-label>
-    <mat-select [(value)]="powers" multiple>
+    <mat-select [(value)]="superhero.powers" multiple>
      <mat-option>None</mat-option>
      <mat-option value="fly">fly</mat-option>
      <mat-option value="hammer">wield hammer</mat-option>
      <mat-option value="power">grow powerful</mat-option>
      </mat-select>
      </mat-form-field>
-     <strong> My superhero can " {{powers}} "</strong>
+     <strong> My superhero can " {{superhero.powers}} "</strong>
      </div>
-<!--/form-->
+</form>
+{{superhero | json}}
+<strong>
+    Form Status, Valid- {{superheroForm.valid}}. Pristine- {{superheroForm.
+    pristine}}. Touched- {{superheroForm.touched}}
+</strong>
+<div>
+    <button mat-stroked-button> Cancel </button>
+    <button mat-stroked-button [disabled]="!superheroForm.valid" (click)="save($event)"> Save</button>
+    </div>
