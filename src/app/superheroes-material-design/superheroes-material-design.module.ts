@@ -8,21 +8,26 @@ import { SuperheroProfileFooterComponent } from './superhero-profile-footer/supe
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { SuperheroNewListComponent } from './superhero-new-list/superhero-new-list.component';
+import { CreateSuperheroComponent } from './create-superhero/create-superhero.component';
+
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
     SuperheroProfileComponent,
     SuperheroProfileFooterComponent,
     HomeComponent,
-    SuperheroNewListComponent
+    SuperheroNewListComponent,
+    CreateSuperheroComponent
   ],
   imports: [
     CommonModule,
     BrowserAnimationsModule,
     MatCardModule,
     MatToolbarModule,
-    FormsModule
+    FormsModule,
+    MatFormFieldModule
   ],
-  exports: [SuperheroProfileComponent, SuperheroProfileFooterComponent, HomeComponent, SuperheroNewListComponent]
+  exports: [SuperheroProfileComponent, SuperheroProfileFooterComponent, HomeComponent, SuperheroNewListComponent, CreateSuperheroComponent]
 })
 export class SuperheroesMaterialDesignModule { }
