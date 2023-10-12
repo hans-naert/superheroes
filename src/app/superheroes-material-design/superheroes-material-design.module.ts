@@ -14,6 +14,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 
 import {MatInputModule} from '@angular/material/input';
 
+import {MatSelectModule} from '@angular/material/select';
+
 @NgModule({
   declarations: [
     SuperheroProfileComponent,
@@ -29,7 +31,8 @@ import {MatInputModule} from '@angular/material/input';
     MatToolbarModule,
     FormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatSelectModule
   ],
   exports: [SuperheroProfileComponent, SuperheroProfileFooterComponent, HomeComponent, SuperheroNewListComponent, CreateSuperheroComponent]
 })

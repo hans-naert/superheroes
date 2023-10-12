@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./create-superhero.component.css']
 })
 export class CreateSuperheroComponent {
-
+ public country = "";
 }

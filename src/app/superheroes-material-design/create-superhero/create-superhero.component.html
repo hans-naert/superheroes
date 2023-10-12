@@ -1,5 +1,5 @@
 <p>create-superhero works!</p>
-<form #superheroForm="ngForm">
+<!--form #superheroForm="ngForm"-->
 <div>
     <mat-form-field appearance="outline">
         <mat-label>Superhero Name</mat-label>
@@ -15,4 +15,18 @@
         <mat-hint>Explain superhero powers</mat-hint>
     </mat-form-field>
 </div>
-</form>
+<div>
+    <!-- Appearance: Outline -->
+    <mat-form-field appearance="outline">
+    <mat-label>Country</mat-label>
+    <mat-select [(value)]="country">
+    <mat-option>None</mat-option>
+    <mat-option value="in">India</mat-option>
+    <mat-option value="us">United States</mat-option>
+    <mat-option value="os">Outer space</mat-option>
+    </mat-select>
+    </mat-form-field>
+    </div>
+
+    <strong>Superhero comes from " {{country}} "</strong>
+<!--/form-->
