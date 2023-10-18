@@ -1,3 +1,9 @@
 <router-outlet></router-outlet>
 <span>{{ title }} is the name of the app</span>
-<app-superhero-profile><app-superhero-profile-footer></app-superhero-profile-footer></app-superhero-profile>
+<ul>
+    <li *ngFor="let s of superheroes">{{s}}
+        <app-superhero-profile [name]="s" (fly)="print_fly($event)"><app-superhero-profile-footer></app-superhero-profile-footer></app-superhero-profile>
+
+    </li>
+</ul>
+

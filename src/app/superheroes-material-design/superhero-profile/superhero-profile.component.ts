@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import SuperheroText from '../utilities/superhero-text';
 
 @Component({
@@ -8,5 +8,19 @@ import SuperheroText from '../utilities/superhero-text';
   providers: [SuperheroText]
 })
 export class SuperheroProfileComponent {
+
+  cssClasses: {[key: string]: boolean} = {
+    "colorful":false}
+
+  @Input()
+  name="";
+
+  @Output() fly = new EventEmitter<String>();
+
+  fly_func(str: String)
+  {
+    this.fly.emit(str);
+    this.cssClasses["colorful"]=true;
+  }
 
 }

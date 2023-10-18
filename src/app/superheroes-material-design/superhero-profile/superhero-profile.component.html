@@ -1,5 +1,7 @@
 <mat-card>
-    <h1>Spiderman</h1>
+    <label for="input-label">input</label>
+    <input type="text" id="input-label" [(ngModel)]="name"/>
+    <h1 [ngClass]="cssClasses">{{name}}</h1>
     <p>
         Lives in New York. He is a friendly neighbourhood superhero.
     </p>
@@ -16,4 +18,5 @@
         </li>
     </div>
     <ng-content></ng-content>
+    <button (click)="fly_func(name)">fly</button>
 </mat-card>
