@@ -19,7 +19,10 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
 import { CreateSuperheroReactiveFormComponent } from './create-superhero-reactive-form/create-superhero-reactive-form.component';
 import {MatSliderModule} from '@angular/material/slider'
-import {MatSlideToggleModule} from '@angular/material/slide-toggle'
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { SuperheroToolbarComponent } from './superhero-toolbar/superhero-toolbar.component';
+import { SuperheorGridListComponent } from './superheor-grid-list/superheor-grid-list.component'
+
 
 @NgModule({
   declarations: [
@@ -28,7 +31,9 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle'
     HomeComponent,
     SuperheroNewListComponent,
     CreateSuperheroComponent,
-    CreateSuperheroReactiveFormComponent
+    CreateSuperheroReactiveFormComponent,
+    SuperheroToolbarComponent,
+    SuperheorGridListComponent
   ],
   imports: [
     CommonModule,
@@ -44,6 +49,6 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle'
     MatSliderModule,
     MatSlideToggleModule,
   ],
-  exports: [SuperheroProfileComponent, SuperheroProfileFooterComponent, HomeComponent, SuperheroNewListComponent, CreateSuperheroComponent, CreateSuperheroReactiveFormComponent]
+  exports: [SuperheroProfileComponent, SuperheroProfileFooterComponent, HomeComponent, SuperheroNewListComponent, CreateSuperheroComponent, CreateSuperheroReactiveFormComponent, SuperheroToolbarComponent]
 })
 export class SuperheroesMaterialDesignModule { }

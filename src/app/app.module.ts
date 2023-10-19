@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SuperheroesMaterialDesignModule } from './superheroes-material-design/superheroes-material-design.module';
 
 import {SuperheroDataService} from './data-services/superhero-data.service';
+import { AppHttpCallsModule } from './app-http-calls/app-http-calls.module';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import {SuperheroDataService} from './data-services/superhero-data.service';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SuperheroesMaterialDesignModule
+    SuperheroesMaterialDesignModule,
+    AppHttpCallsModule
   ],
   providers: [SuperheroDataService],
   bootstrap: [AppComponent]
