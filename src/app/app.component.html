@@ -1,6 +1,10 @@
-<router-outlet></router-outlet>
+
 <span>{{ title }} is the name of the app</span>
 <!--app-superhero-new-list></app-superhero-new-list-->
 <!--app-create-superhero></app-create-superhero-->
-<app-create-superhero-reactive-form></app-create-superhero-reactive-form>
-<app-home></app-home>
+<!--app-create-superhero-reactive-form></app-create-superhero-reactive-form-->
+<!--app-home></app-home-->
+<a routerLink="home">Home</a>
+<br/> <a routerLink="create-hero">Create a Super Hero</a>
+<button (click)="navigate()">Go to home</button>
+<router-outlet></router-outlet>
