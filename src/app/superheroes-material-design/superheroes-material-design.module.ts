@@ -18,6 +18,8 @@ import {MatSelectModule} from '@angular/material/select';
 
 import {MatButtonModule} from '@angular/material/button';
 import { CreateSuperheroReactiveFormComponent } from './create-superhero-reactive-form/create-superhero-reactive-form.component';
+import {MatSliderModule} from '@angular/material/slider'
+import {MatSlideToggleModule} from '@angular/material/slide-toggle'
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { CreateSuperheroReactiveFormComponent } from './create-superhero-reactiv
     MatInputModule,
     MatSelectModule,
     MatButtonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSliderModule,
+    MatSlideToggleModule,
   ],
   exports: [SuperheroProfileComponent, SuperheroProfileFooterComponent, HomeComponent, SuperheroNewListComponent, CreateSuperheroComponent, CreateSuperheroReactiveFormComponent]
 })

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormBuilder, FormGroup,Validators } from "@angular/forms"
+import { FormControl, FormBuilder, FormGroup,Validators, FormArray } from "@angular/forms"
 
 @Component({
   selector: 'app-create-superhero-reactive-form',
@@ -13,11 +13,23 @@ export class CreateSuperheroReactiveFormComponent {
   // Create an instance of FormControl using the FormBuilder
   name: FormControl = this.fb.control("");
 
-  // Inject FormBuilder
+  countries=[
+    { 
+      name:"België",
+      selectedByDefault:true
+    }, { 
+      name:"Nederland",
+      selectedByDefault:false
+    }, ]
+
+    // Inject FormBuilder
   constructor(private fb: FormBuilder) { 
-    this.superheroFormGroup = this.fb.group({
-      name: ['',[Validators.required]],
-      country:''
+
+    let j=this.countries.map( i => new FormControl(i.selectedByDefault))
+
+    this.superheroFormGroup = new FormGroup({
+      name: new FormControl('',Validators.required),
+      countriescontrols: new FormArray(j)
     })
   }
 

@@ -7,6 +7,14 @@
 
 <form #superheroForm="ngForm" [formGroup]="superheroFormGroup" (submit)="submitHandler()">
     <input type="text" name="name" formControlName="name"/>
-    <input type="text" name="country" formControlName="country"/>
+    <!--input type="text" name="country" formControlName="country"/-->
+    <div formArrayName="countriescontrols" *ngFor="let country of
+    countries; let i=index;" >
+    <mat-slide-toggle [formControlName]="i" >
+    {{countries[i].name}}
+    </mat-slide-toggle>
+    </div>
+
+
     <button *ngIf="superheroFormGroup?.valid" type="submit">submit</button>
 </form>
