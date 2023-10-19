@@ -1,0 +1,6 @@
+<p>create-superhero-reactive-form works!</p>
+<mat-form-field appearance="outline">
+    <mat-label>Superhero Name</mat-label>
+    <input type="text" name="name" [formControl]="name" matInput placeholder="A name to be remembered" (change)="changeHandler()"/>
+    <mat-hint>Enter name</mat-hint>
+</mat-form-field>
