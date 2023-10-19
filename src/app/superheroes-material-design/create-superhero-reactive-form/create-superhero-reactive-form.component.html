@@ -4,3 +4,9 @@
     <input type="text" name="name" [formControl]="name" matInput placeholder="A name to be remembered" (change)="changeHandler()"/>
     <mat-hint>Enter name</mat-hint>
 </mat-form-field>
+
+<form #superheroForm="ngForm" [formGroup]="superheroFormGroup" (submit)="submitHandler()">
+    <input type="text" name="name" formControlName="name"/>
+    <input type="text" name="country" formControlName="country"/>
+    <button *ngIf="superheroFormGroup?.valid" type="submit">submit</button>
+</form>
