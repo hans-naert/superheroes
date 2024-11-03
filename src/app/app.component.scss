@@ -1,0 +1,15 @@
+@use '@angular/material' as mat;
+@import 'styles.scss';
+
+mat-toolbar{
+ color: mat.get-theme-color($angular-app-scss-theme, on-primary);
+ background-color: mat.get-theme-color($angular-app-scss-theme, primary);
+}
+
+
+mat-card {
+    margin: 20px;
+    width: 50rem;
+    color: mat.get-theme-color($angular-app-scss-theme, on-secondary);
+    background-color: mat.get-theme-color($angular-app-scss-theme, secondary);
+   }
