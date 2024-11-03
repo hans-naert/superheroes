@@ -76,8 +76,13 @@
             },
             "development": {
               "buildTarget": "superheroes:build:development"
+            },
+           
+          }, 
+          "options": {
+              "host": "127.0.0.1",
+              "port": 4200
             }
-          },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
