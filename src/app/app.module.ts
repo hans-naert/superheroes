@@ -7,6 +7,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
+import { MatIcon } from '@angular/material/icon'; 
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { MatCardModule } from '@angular/material/card';
     AppRoutingModule,
     MatToolbarModule,
     MatCardModule,
+    MatIcon
   ],
   providers: [
     provideAnimationsAsync()
