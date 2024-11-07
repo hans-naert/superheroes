@@ -1,4 +1,13 @@
+<mat-card>
 <p>superhero-profile works!</p>
 <h1>
-    <ng-content></ng-content>
+    <div>
+        name: {{name}}
+    </div>
+    <div>
+        firstAppearance: {{firstAppearance}}
+    </div>
+    <button (click)="returnSuperheroData()"> Fly with a Superhero</button>
+    <app-superhero-toolbar></app-superhero-toolbar> 
 </h1>
+</mat-card>

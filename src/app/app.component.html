@@ -15,9 +15,9 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-<app-superhero-profile> 
-  <app-superhero-toolbar></app-superhero-toolbar> 
+<div>{{title}}</div>
+<app-superhero-profile name="Spiderman" [firstAppearance]="2000+4" (fly)="fly($event)"> 
+  
 </app-superhero-profile>
 
 

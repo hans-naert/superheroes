@@ -1,0 +1,7 @@
+@use '@angular/material' as mat;
+@import 'styles.scss';
+
+h1 {
+    color: mat.get-theme-color($superheroes-theme, on-primary);
+    background-color: mat.get-theme-color($superheroes-theme, primary);
+}

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SuperheroToolbarComponent } from './superhero-toolbar/superhero-toolbar.component';
 import { SuperheroProfileComponent } from './superhero-profile/superhero-profile.component';
+import { MatCardModule } from '@angular/material/card';
 
 
 
@@ -11,7 +12,8 @@ import { SuperheroProfileComponent } from './superhero-profile/superhero-profile
     SuperheroProfileComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatCardModule,
   ],
   exports: [
     SuperheroToolbarComponent,
