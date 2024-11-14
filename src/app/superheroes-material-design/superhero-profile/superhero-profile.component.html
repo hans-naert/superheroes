@@ -11,7 +11,7 @@
     <app-superhero-toolbar></app-superhero-toolbar> 
 </h1>
     <div class="apply-margin">
-        <input type="text" (input)="callbackinput($event)" />
+        <input type="text" [(ngModel)]="superheroName" />
     |
     <strong [innerText]="superheroName"></strong>
     </div>
