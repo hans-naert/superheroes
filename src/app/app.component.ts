@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Superhero } from './superheroes-material-design/superhero-profile/superhero-profile.component';
 
+import { SuperheroDataService } from './data-service/superhero-data.service';
+
 
 @Component({
   selector: 'app-root',
@@ -10,7 +12,14 @@ import { Superhero } from './superheroes-material-design/superhero-profile/super
 export class AppComponent {
   title = 'superheroes';
 
-  heroes= ["superman", "spiderman", "batman", "wonderwoman"];
+  //heroes= ["superman", "spiderman", "batman", "wonderwoman"];
+
+  heroes : string[] = [];
+
+  constructor(public superheroDataService: SuperheroDataService) { 
+
+    this.heroes=superheroDataService.getSuperheroes();
+  }
 
   fly(event: Superhero): void
   {
