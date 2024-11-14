@@ -13,6 +13,8 @@ export class SuperheroProfileComponent {
   @Input("lives-in") livesIn: string = "Metropolis";
   @Output() fly = new EventEmitter<Superhero>();
 
+  superheroName="none";
+
   returnSuperheroData(): void 
   {
     let superhero: Superhero = {
@@ -20,7 +22,12 @@ export class SuperheroProfileComponent {
       firstAppearance: this.firstAppearance,
       livesIn: this.livesIn
     }
-    this.fly.emit(superhero);
+    this.fly.emit(superhero)
+  }
+
+  callbackinput(event: any): void 
+  {
+    this.superheroName = event.target.value;
   }
 
 }

@@ -10,4 +10,12 @@
     <button (click)="returnSuperheroData()"> Fly with a Superhero</button>
     <app-superhero-toolbar></app-superhero-toolbar> 
 </h1>
+    <div class="apply-margin">
+        <input type="text" (input)="callbackinput($event)" />
+    |
+    <strong [innerText]="superheroName"></strong>
+    </div>
+
+    <strong> {{superheroName}} </strong>
+
 </mat-card>

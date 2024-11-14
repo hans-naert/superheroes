@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SuperheroToolbarComponent } from './superhero-toolbar/superhero-toolbar.component';
 import { SuperheroProfileComponent } from './superhero-profile/superhero-profile.component';
 import { MatCardModule } from '@angular/material/card';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -14,6 +15,7 @@ import { MatCardModule } from '@angular/material/card';
   imports: [
     CommonModule,
     MatCardModule,
+    FormsModule
   ],
   exports: [
     SuperheroToolbarComponent,
