@@ -16,9 +16,16 @@
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <div>{{title}}</div>
-<app-superhero-profile name="Spiderman" [firstAppearance]="2000+4" (fly)="fly($event)"> 
+
+<ul>
+    <li *ngFor="let hero of heroes;index as i">
+        <app-superhero-profile [name]="hero" [firstAppearance]="2000+i" (fly)="fly($event)"> </app-superhero-profile>
+    </li>
+</ul>
+
+
   
-</app-superhero-profile>
+
 
 
 <router-outlet />

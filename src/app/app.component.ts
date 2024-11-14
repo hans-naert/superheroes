@@ -10,6 +10,8 @@ import { Superhero } from './superheroes-material-design/superhero-profile/super
 export class AppComponent {
   title = 'superheroes';
 
+  heroes= ["superman", "spiderman", "batman", "wonderwoman"];
+
   fly(event: Superhero): void
   {
     console.log(event);
