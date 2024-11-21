@@ -16,7 +16,7 @@
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <div>{{title}}</div>
-
+<div>{{superheroDataService.superheroes$ | async}}</div>
 <ul>
     <li *ngFor="let hero of heroes;index as i">
         <app-superhero-profile [name]="hero" [firstAppearance]="2000+i" (fly)="fly($event)"> </app-superhero-profile>

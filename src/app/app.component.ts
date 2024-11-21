@@ -18,7 +18,8 @@ export class AppComponent {
 
   constructor(public superheroDataService: SuperheroDataService) { 
 
-    this.heroes=superheroDataService.getSuperheroes();
+    //this.heroes=superheroDataService.getSuperheroes();
+    this.superheroDataService.superheroes$.subscribe( hero => this.heroes.push(hero))
   }
 
   fly(event: Superhero): void
