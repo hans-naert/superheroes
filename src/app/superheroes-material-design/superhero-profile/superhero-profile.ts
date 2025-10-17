@@ -9,7 +9,7 @@ import SuperheroText from '../utilities/superhero-text';
  // `,
   templateUrl: './superhero-profile.html',
   styleUrl: './superhero-profile.scss',
-  viewProviders: [SuperheroText]
+  providers: [SuperheroText]
 })
 export class SuperheroProfile {
 

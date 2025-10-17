@@ -19,7 +19,8 @@ import { SuperheroProfileFooter } from './superhero-profile-footer/superhero-pro
   ],
   exports: [
     SuperheroToolbar,
-    SuperheroProfile
+    SuperheroProfile,
+    SuperheroProfileFooter
   ]
 })
 export class SuperheroesMaterialDesignModule { }
