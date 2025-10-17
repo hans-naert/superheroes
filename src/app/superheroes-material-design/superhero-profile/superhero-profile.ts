@@ -1,7 +1,13 @@
 import { Component } from '@angular/core';
-import SuperheroText from '../utilities/superhero-text';
-import { Input, Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
+import { Input, Output } from '@angular/core';
+import SuperheroText from '../utilities/superhero-text';
+
+export type Hero = {
+  name: string;
+  livesIn: string;
+  firstAppearance: number;
+};
 
 @Component({
   selector: 'app-superhero-profile',
@@ -29,13 +35,13 @@ export class SuperheroProfile {
 
     }
   }
-  @Output() flyWithSuperhero = new EventEmitter<any>();
+  @Output() flyWithSuperhero = new EventEmitter<Hero>();
   // getter for the use of template. 
   get firstAppearance() { return this._firstAppearance; }
 
 
   returnSuperheroData() {
-    let hero = {
+    const hero: Hero = {
       name: this.name,
       livesIn: this.livesIn,
       firstAppearance: this._firstAppearance
