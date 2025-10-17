@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import SuperheroText from '../utilities/superhero-text';
 
 @Component({
   selector: 'app-superhero-profile',
@@ -7,7 +8,8 @@ import { Component } from '@angular/core';
  // <div>test superhero profile works!</div>
  // `,
   templateUrl: './superhero-profile.html',
-  styleUrl: './superhero-profile.scss'
+  styleUrl: './superhero-profile.scss',
+  viewProviders: [SuperheroText]
 })
 export class SuperheroProfile {
 
