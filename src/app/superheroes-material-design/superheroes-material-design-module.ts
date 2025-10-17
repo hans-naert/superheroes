@@ -4,11 +4,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { SuperheroToolbar } from './superhero-toolbar/superhero-toolbar';
 import { SuperheroProfile } from './superhero-profile/superhero-profile';
+import { SuperheroProfileFooter } from './superhero-profile-footer/superhero-profile-footer';
 
 @NgModule({
   declarations: [
     SuperheroToolbar,
-    SuperheroProfile
+    SuperheroProfile,
+    SuperheroProfileFooter
   ],
   imports: [
     CommonModule,
