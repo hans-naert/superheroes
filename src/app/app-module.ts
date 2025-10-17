@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
+import { SuperheroesMaterialDesignModule } from './superheroes-material-design/superheroes-material-design-module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { MatCardModule } from '@angular/material/card';
     BrowserModule,
     AppRoutingModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
+    SuperheroesMaterialDesignModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners()
