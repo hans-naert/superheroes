@@ -8,4 +8,8 @@ import { Component, signal } from '@angular/core';
 })
 export class App {
   protected readonly title = signal('superheroes');
+
+   printSuperhero(hero: any) 
+   { console.log(hero); // print the received event object. 
+    }
 }
