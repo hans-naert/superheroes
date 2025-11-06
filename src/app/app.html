@@ -23,7 +23,7 @@ lives-in="India"
 <br/>
 <mat-card>
   <mat-card-header>
-    <mat-card-title>Add New Superhero</mat-card-title>
+    <mat-card-title>Add New Superhero (Template-Driven)</mat-card-title>
   </mat-card-header>
   <mat-card-content>
     <form #superheroForm="ngForm" (ngSubmit)="submitSuperheroForm(superheroForm.value)">
@@ -63,6 +63,60 @@ lives-in="India"
       </mat-form-field>
 
       <button mat-raised-button color="primary" type="submit" [disabled]="!superheroForm.valid">
+        Add Superhero
+      </button>
+    </form>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Add New Superhero (Reactive)</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form [formGroup]="superheroReactiveForm" (ngSubmit)="submitSuperheroReactiveForm()">
+      <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput type="text" formControlName="name" />
+        @if (superheroReactiveForm.get('name')?.hasError('required') && superheroReactiveForm.get('name')?.touched) {
+          <mat-error>Name is required</mat-error>
+        }
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="email" />
+        @if (superheroReactiveForm.get('email')?.hasError('email') && superheroReactiveForm.get('email')?.touched) {
+          <mat-error>Please enter a valid email</mat-error>
+        }
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Details</mat-label>
+        <textarea matInput formControlName="details" rows="3"></textarea>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Country</mat-label>
+        <input matInput type="text" formControlName="country" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Special Powers</mat-label>
+        <input matInput type="text" formControlName="specialPowers" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Favorite Food</mat-label>
+        <input matInput type="text" formControlName="favFood" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Card Image URL</mat-label>
+        <input matInput type="url" formControlName="cardImage" />
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit" [disabled]="!superheroReactiveForm.valid">
         Add Superhero
       </button>
     </form>
