@@ -1,5 +1,4 @@
 import { Component, signal } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Hero } from './superheroes-material-design/superhero-profile/superhero-profile';
 import { SuperheroDataService } from './data-services/superhero-data-service';
 @Component({
@@ -14,21 +13,9 @@ export class App {
 
   protected readonly names = signal(['Aquaman', 'Batman', 'Captain America', 'Catwoman', 'Cyclops', 'Flash', 'Green Lantern', 'Ironman', 'Spiderman', 'Superman', 'Wolverine']);
 
-  protected superheroReactiveForm: FormGroup;
-
   constructor( 
-    private superheroDataService: SuperheroDataService,
-    private fb: FormBuilder
+   private superheroDataService: SuperheroDataService
   ) {
-    this.superheroReactiveForm = this.fb.group({
-      name: ['', Validators.required],
-      email: ['', Validators.email],
-      details: [''],
-      country: [''],
-      specialPowers: [''],
-      favFood: [''],
-      cardImage: ['']
-    });
   }
 
   ngOnInit() {
@@ -49,17 +36,6 @@ export class App {
 
   handleEvent2(event:any) {
        this.title.set(event.target.value);
-  }
-
-  submitSuperheroForm(formData: any) {
-    console.log('Template-Driven Form Data Submitted: ', formData);
-  }
-
-  submitSuperheroReactiveForm() {
-    if (this.superheroReactiveForm.valid) {
-      console.log('Reactive Form Data Submitted: ', this.superheroReactiveForm.value);
-      this.superheroReactiveForm.reset();
-    }
   }
 
 }

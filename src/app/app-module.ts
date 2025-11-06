@@ -10,10 +10,16 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { SuperheroesMaterialDesignModule } from './superheroes-material-design/superheroes-material-design-module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TemplateDrivenForm } from './components/template-driven-form/template-driven-form';
+import { ReactiveForm } from './components/reactive-form/reactive-form';
+import { Demo } from './components/demo/demo';
 
 @NgModule({
   declarations: [
-    App
+    App,
+    TemplateDrivenForm,
+    ReactiveForm,
+    Demo
   ],
   imports: [
     BrowserModule,

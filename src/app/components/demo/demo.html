@@ -1,0 +1,16 @@
+<app-superhero-profile name="Chhota Bheem" 
+[firstAppearance]="1940"  
+lives-in="India"
+(flyWithSuperhero)="printSuperhero($event)">
+	<app-superhero-profile-footer></app-superhero-profile-footer>
+</app-superhero-profile>
+
+@for(name of names(); track name)
+{
+ <p>{{ name }} </p>
+}
+
+<input type="text" placeholder="handleEvent" (input)="handleEvent($event)"/>
+<input type="text" placeholder="handleEvent2" (input)="handleEvent2($event)"/>
+<input type="text" placeholder="Two-way title2" [(ngModel)]="title2"/>
+<input type ="text" placeholder="Bind to title()" [ngModel]="title()" (ngModelChange)="title.set($event)"/>
