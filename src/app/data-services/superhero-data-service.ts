@@ -1,45 +1,19 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SuperheroDataService {
-  constructor() { }
+  private readonly baseUrl = 'http://localhost:3001';
+  constructor(private http: HttpClient) { }
 
-  getSuperheroes(): Observable<Array<Superhero>>{
-    return new Observable<Array<Superhero>>( observer => {
-      observer.next([
-        {
-          name: "Chhotta Bheem",
-          email: "ChhottaBheem@angularsample.com",
-          details: "A hero in Dholakpur village",
-          country: "India",
-          cardImage: "/assets/chhottabheem.png",
-          specialPowers: ["a very strong boy!"],
-          favFood: ["Laddu"]
-        },
-        {
-          name: "Spiderman",
-          email: "spiderman@angularsample.com",
-          details: "A hero in New York city",
-          country: "United States",
-          specialPowers: ["Shoots web"],
-          cardImage: "/assets/spiderman.jpg",
-          favFood: ["Cheese burger"]
-        },
-        {
-          name: "Batman",
-          email: "batman@angularsample.com",
-          details: "A hero in Gotham city",
-          country: "United Kingdom",
-          cardImage: "/assets/batman.png",
-          specialPowers: ["Martial Arts"],
-          favFood: ["Spaghetti"]
-        }
-      ]);
-      observer.complete();
-    })
+  getSuperheroes(): Observable<Superhero[]> {
+    return this.http.get<Superhero[]>(`${this.baseUrl}/superheroes`).pipe(
+      map(list => list.map(item => ({ ...item, isExpanded: false })))
+    );
   }
   
 }

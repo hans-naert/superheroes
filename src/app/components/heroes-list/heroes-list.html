@@ -1,0 +1,23 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Heroes</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    @if (loading()) {
+      <p>Loading…</p>
+    } @else if (error()) {
+      <p>{{ error() }}</p>
+    } @else {
+      @for (hero of heroes(); track trackByName($index, hero)) {
+        <mat-card class="hero-card">
+          <mat-card-title>{{ hero.name }}</mat-card-title>
+          <mat-card-content>
+            <div>Email: {{ hero.email }}</div>
+            <div>Country: {{ hero.country }}</div>
+            <div>Details: {{ hero.details }}</div>
+          </mat-card-content>
+        </mat-card>
+      }
+    }
+  </mat-card-content>
+</mat-card>
