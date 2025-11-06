@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 import { SuperheroesMaterialDesignModule } from './superheroes-material-design/superheroes-material-design-module';
 import { FormsModule } from '@angular/forms';
 
@@ -17,6 +20,9 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     MatCardModule,
     MatToolbarModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
     SuperheroesMaterialDesignModule,
     FormsModule
   ],

@@ -37,5 +37,8 @@ export class App {
        this.title.set(event.target.value);
   }
 
+  submitSuperheroForm(formData: any) {
+    console.log('Form Data Submitted: ', formData);
+  }
 
 }

@@ -19,4 +19,54 @@ lives-in="India"
 <input type="text" (input)="handleEvent2($event)"/>
 <input type="text" [(ngModel)]="title2"/>
 <input type ="text" [ngModel]="title()" (ngModelChange)="title.set($event)"/>
+
+<br/>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Add New Superhero</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form #superheroForm="ngForm" (ngSubmit)="submitSuperheroForm(superheroForm.value)">
+      <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput type="text" name="name" ngModel required />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" name="email" ngModel email />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Details</mat-label>
+        <textarea matInput name="details" ngModel rows="3"></textarea>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Country</mat-label>
+        <input matInput type="text" name="country" ngModel />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Special Powers</mat-label>
+        <input matInput type="text" name="specialPowers" ngModel />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Favorite Food</mat-label>
+        <input matInput type="text" name="favFood" ngModel />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Card Image URL</mat-label>
+        <input matInput type="url" name="cardImage" ngModel />
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit" [disabled]="!superheroForm.valid">
+        Add Superhero
+      </button>
+    </form>
+  </mat-card-content>
+</mat-card>
+
 <router-outlet />
