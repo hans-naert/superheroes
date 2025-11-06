@@ -11,5 +11,6 @@ export class App {
 
    printSuperhero(hero: Hero) 
    { console.log(hero); // print the received event object. 
+    this.title.set(hero.name);
     }
 }
