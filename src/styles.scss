@@ -37,3 +37,15 @@ body {
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+$theme: mat.define-theme((
+  color: (
+    theme-type: light
+  )
+));
+
+:root {
+  /* Expose the token as your own variable */
+  --on-primary: #{mat.get-theme-color($theme, on-primary)};
+  --primary: #{mat.get-theme-color($theme, primary)};
+}

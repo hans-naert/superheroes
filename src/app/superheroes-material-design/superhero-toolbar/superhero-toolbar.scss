@@ -1,0 +1,5 @@
+@use '@angular/material' as mat;
+p {
+  color: var(--on-primary);
+  background-color: var(--primary);
+}
