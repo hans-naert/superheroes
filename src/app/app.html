@@ -1,3 +1,4 @@
+<h1>{{ title() }}</h1>
 <mat-toolbar color="primary">Superheroes</mat-toolbar>
 <mat-card> Hello Material Design World</mat-card>
 <app-superhero-toolbar></app-superhero-toolbar>
@@ -7,5 +8,10 @@ lives-in="India"
 (flyWithSuperhero)="printSuperhero($event)">
     <app-superhero-profile-footer></app-superhero-profile-footer>
 </app-superhero-profile>
+
+@for(name of names(); track name)
+{
+ <p>{{ name }} </p>
+}
 
 <router-outlet />

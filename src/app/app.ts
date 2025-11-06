@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { Hero } from './superheroes-material-design/superhero-profile/superhero-profile';  
+import { Hero } from './superheroes-material-design/superhero-profile/superhero-profile';
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
@@ -9,8 +9,10 @@ import { Hero } from './superheroes-material-design/superhero-profile/superhero-
 export class App {
   protected readonly title = signal('superheroes');
 
-   printSuperhero(hero: Hero) 
-   { console.log(hero); // print the received event object. 
+  protected readonly names = signal(['Aquaman', 'Batman', 'Captain America', 'Catwoman', 'Cyclops', 'Flash', 'Green Lantern', 'Ironman', 'Spiderman', 'Superman', 'Wolverine']);
+
+  printSuperhero(hero: Hero) {
+    console.log(hero); // print the received event object. 
     this.title.set(hero.name);
-    }
+  }
 }
