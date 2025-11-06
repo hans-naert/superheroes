@@ -1,4 +1,5 @@
 <h1>{{ title() }}</h1>
+<h1>{{ title2}}</h1>
 <mat-toolbar color="primary">Superheroes</mat-toolbar>
 <mat-card> Hello Material Design World</mat-card>
 <app-superhero-toolbar></app-superhero-toolbar>
@@ -14,4 +15,8 @@ lives-in="India"
  <p>{{ name }} </p>
 }
 
+<input type="text" (input)="handleEvent($event)"/>
+<input type="text" (input)="handleEvent2($event)"/>
+<input type="text" [(ngModel)]="title2"/>
+<input type ="text" [ngModel]="title()" (ngModelChange)="title.set($event)"/>
 <router-outlet />

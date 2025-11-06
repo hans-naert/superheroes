@@ -6,6 +6,7 @@ import { App } from './app';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { SuperheroesMaterialDesignModule } from './superheroes-material-design/superheroes-material-design-module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SuperheroesMaterialDesignModule } from './superheroes-material-design/s
     AppRoutingModule,
     MatCardModule,
     MatToolbarModule,
-    SuperheroesMaterialDesignModule
+    SuperheroesMaterialDesignModule,
+    FormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners()
