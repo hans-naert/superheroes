@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { Hero } from './superheroes-material-design/superhero-profile/superhero-profile';
+import { SuperheroDataService } from './data-services/superhero-data-service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
@@ -11,6 +12,16 @@ export class App {
   protected title2: string = 'superheroes';
 
   protected readonly names = signal(['Aquaman', 'Batman', 'Captain America', 'Catwoman', 'Cyclops', 'Flash', 'Green Lantern', 'Ironman', 'Spiderman', 'Superman', 'Wolverine']);
+
+  constructor( private superheroDataService: SuperheroDataService) {
+   
+  }
+
+  ngOnInit() {
+    this.superheroDataService.getSuperheroes().subscribe( heroes => {
+      console.log(heroes);
+    });
+  }
 
   printSuperhero(hero: Hero) {
     console.log(hero); // print the received event object. 
