@@ -10,7 +10,7 @@ import SuperheroText from '../utilities/superhero-text';
 })
 export class SuperheroProfile implements OnChanges {
   @Input() name: string = '';
-  @Input() firstAppearance: string = '';
+  @Input() firstAppearance: number = 0;
   @Input("lives-in") livesIn: string = '';
 
    ngOnChanges(changes: SimpleChanges) {
