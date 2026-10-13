@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import SuperheroText from '../utilities/superhero-text';
 
 @Component({
@@ -8,8 +8,12 @@ import SuperheroText from '../utilities/superhero-text';
   templateUrl: './superhero-profile.html',
   providers: [SuperheroText]
 })
-export class SuperheroProfile {
+export class SuperheroProfile implements OnChanges {
   @Input() name: string = '';
   @Input() firstAppearance: string = '';
   @Input("lives-in") livesIn: string = '';
+
+   ngOnChanges(changes: SimpleChanges) {
+    console.log(changes);
+ }
 }
