@@ -9,6 +9,6 @@ import { SuperheroProfileFooter } from './superhero-profile-footer/superhero-pro
 @NgModule({
   declarations: [SuperheroProfile, SuperheroToolbar, SuperheroProfileFooter],
   imports: [CommonModule, MatToolbarModule, MatCardModule],
-  exports: [SuperheroProfile, SuperheroToolbar],
+  exports: [SuperheroProfile, SuperheroToolbar, SuperheroProfileFooter],
 })
 export class SuperheroesMaterialDesignModule {}
