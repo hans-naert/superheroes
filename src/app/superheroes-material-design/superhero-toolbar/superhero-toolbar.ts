@@ -4,6 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-superhero-toolbar',
   standalone: false,
   styleUrl: './superhero-toolbar.scss',
-  templateUrl: './superhero-toolbar.html',
+  template: `<mat-toolbar>
+    <span>Superheroes</span>
+  </mat-toolbar>`,
 })
 export class SuperheroToolbar {}
