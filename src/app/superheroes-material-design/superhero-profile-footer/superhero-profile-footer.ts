@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import SuperheroText from '../utilities/superhero-text';
 
 @Component({
   selector: 'app-superhero-profile-footer',
@@ -6,4 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './superhero-profile-footer.scss',
   templateUrl: './superhero-profile-footer.html',
 })
-export class SuperheroProfileFooter {}
+export class SuperheroProfileFooter {
+  //private superheroText: SuperheroText;
+  constructor(private superheroText: SuperheroText) {
+    //this.superheroText = superheroText;
+  }
+}

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import SuperheroText from '../utilities/superhero-text';
 @Component({
   selector: 'app-superhero-toolbar',
   standalone: false,
@@ -8,4 +8,6 @@ import { Component } from '@angular/core';
     <span>Superheroes</span>
   </mat-toolbar>`,
 })
-export class SuperheroToolbar {}
+export class SuperheroToolbar {
+  
+}
