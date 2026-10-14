@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import SuperheroText from '../utilities/superhero-text';
 
 @Component({
@@ -8,4 +8,10 @@ import SuperheroText from '../utilities/superhero-text';
   templateUrl: './superhero-profile.html',
   providers: [SuperheroText],
 })
-export class SuperheroProfile {}
+export class SuperheroProfile {
+  @Input() name: string = '';
+  @Input() firstAppearance=0;
+  @Input('lives-in') livesIn: string = '';
+
+
+}
