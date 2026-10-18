@@ -4,3 +4,7 @@
 <span>First appearance: {{ firstAppearance }}</span><br>
 <span [class.show-bg-color]="showBgColor" [class.show-border-color]="showBorder">Lives in: {{ livesIn }}</span>
  <button (click)="returnSuperheroData()"> Fly with a Superhero</button>
+ <br/>
+<input type="text" (input)="handleEvent($event)" />
+<br/>
+<input type="text" (input)="name= $any($event.target).value;" />
