@@ -5,10 +5,11 @@ import { MatCardModule } from '@angular/material/card';
 import { SuperheroToolbar } from './superhero-toolbar/superhero-toolbar';
 import { SuperheroProfile } from './superhero-profile/superhero-profile';
 import { SuperheroProfileFooter } from './superhero-profile-footer/superhero-profile-footer';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [SuperheroToolbar, SuperheroProfile, SuperheroProfileFooter],
-  imports: [CommonModule, MatToolbarModule, MatCardModule],
+  imports: [CommonModule, MatToolbarModule, MatCardModule, FormsModule],
   exports: [SuperheroToolbar, SuperheroProfile, SuperheroProfileFooter],
 })
 export class SuperheroesMaterialDesignModule {}
