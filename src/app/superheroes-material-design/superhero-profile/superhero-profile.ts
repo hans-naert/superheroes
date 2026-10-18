@@ -1,5 +1,6 @@
-import { Component, Input, Output, OnChanges, SimpleChanges, EventEmitter } from '@angular/core';
+import { Component, Input, Output, OnChanges, SimpleChanges, EventEmitter, inject } from '@angular/core';
 import SuperheroText from '../utilities/superhero-text';
+import { SuperheroData } from '../superhero-data';
 
 @Component({
   selector: 'app-superhero-profile',
@@ -13,13 +14,14 @@ export class SuperheroProfile implements OnChanges {
   @Input() firstAppearance: number = 0;
   @Input("lives-in") livesIn: string = '';
   @Output() flyWithSuperhero = new EventEmitter<Superhero>();
+  private superheroData = inject(SuperheroData);
+  
+  constructor() {
+    this.superheroes = this.superheroData.getSuperheroes();
+  }
 
-  superheroes: Superhero[] = [
-    { name: 'Superman', firstAppearance: 1938, livesIn: 'Metropolis' },
-    { name: 'Batman', firstAppearance: 1939, livesIn: 'Gotham City' },
-    { name: 'Wonder Woman', firstAppearance: 1941, livesIn: 'Themyscira' },
-    { name: 'Spider-Man', firstAppearance: 1962, livesIn: 'New York City' },
-  ];
+
+  superheroes: Superhero[] = [];
 
   showBgColor: boolean = true;
   showBorder: boolean = true;
