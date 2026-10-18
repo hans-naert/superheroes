@@ -14,6 +14,9 @@ export class SuperheroProfile implements OnChanges {
   @Input("lives-in") livesIn: string = '';
   @Output() flyWithSuperhero = new EventEmitter<Superhero>();
 
+  showBgColor: boolean = true;
+  showBorder: boolean = true;
+
    ngOnChanges(changes: SimpleChanges) {
     console.log(changes);
  }

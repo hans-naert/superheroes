@@ -1,6 +1,6 @@
 <p>superhero-profile works!</p>
 <ng-content></ng-content>
-<span>Superhero name: {{ name }}</span><br>
+<span [style.font-size.pt]="30">Superhero name: {{ name }}</span><br>
 <span>First appearance: {{ firstAppearance }}</span><br>
-<span>Lives in: {{ livesIn }}</span>
+<span [class.show-bg-color]="showBgColor" [class.show-border-color]="showBorder">Lives in: {{ livesIn }}</span>
  <button (click)="returnSuperheroData()"> Fly with a Superhero</button>
