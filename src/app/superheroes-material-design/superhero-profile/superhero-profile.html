@@ -10,3 +10,14 @@
 <input type="text" (input)="name= $any($event.target).value;" />
 <br/>
 <input type="text" [(ngModel)]="name"/>
+@for (superhero of superheroes; track superhero.name) {
+  <div>
+    <span>{{ superhero.name }}</span>
+    @if (superhero.firstAppearance > 1940) {
+      <span style="color: red;">{{ superhero.firstAppearance }}</span>
+    } @else {
+      <span>{{ superhero.firstAppearance }}</span>
+    }
+    <span>{{ superhero.livesIn }}</span>
+  </div>
+}

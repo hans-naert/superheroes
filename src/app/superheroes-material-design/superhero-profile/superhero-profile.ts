@@ -14,6 +14,13 @@ export class SuperheroProfile implements OnChanges {
   @Input("lives-in") livesIn: string = '';
   @Output() flyWithSuperhero = new EventEmitter<Superhero>();
 
+  superheroes: Superhero[] = [
+    { name: 'Superman', firstAppearance: 1938, livesIn: 'Metropolis' },
+    { name: 'Batman', firstAppearance: 1939, livesIn: 'Gotham City' },
+    { name: 'Wonder Woman', firstAppearance: 1941, livesIn: 'Themyscira' },
+    { name: 'Spider-Man', firstAppearance: 1962, livesIn: 'New York City' },
+  ];
+
   showBgColor: boolean = true;
   showBorder: boolean = true;
 
