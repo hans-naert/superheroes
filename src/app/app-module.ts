@@ -10,10 +10,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { SuperheroesMaterialDesignModule } from './superheroes-material-design/superheroes-material-design-module';
 import { TemplateDrivenForm } from './template-driven-form/template-driven-form';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveForm } from './reactive-form/reactive-form';
 
 @NgModule({
-  declarations: [App, TemplateDrivenForm],
+  declarations: [App, TemplateDrivenForm, ReactiveForm],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -21,6 +22,7 @@ import { FormsModule } from '@angular/forms';
     MatCardModule,
     SuperheroesMaterialDesignModule,
     FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
