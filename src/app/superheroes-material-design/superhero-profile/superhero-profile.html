@@ -15,3 +15,15 @@
 <ul>
   <li *ngFor="let hero of superheroes">{{hero.name}}</li>
 </ul>
+<ol>
+    @for (superhero of superheroes; track superhero.name) {
+        <li><span>Welcome, {{superhero.name}}!</span>
+            @if (superhero.firstAppearance > 1940) {
+                <span style="color: red;">First Appearance: {{superhero.firstAppearance}}</span>
+            }
+            @else {
+                <span>First Appearance: {{superhero.firstAppearance}}</span>
+            }
+        </li>
+    }
+</ol>
