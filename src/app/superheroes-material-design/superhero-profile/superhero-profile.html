@@ -11,3 +11,7 @@
 <input type="text" (input)="name= $any($event.target).value;" />
 <br/>
 <input type="text" [(ngModel)]="name" />
+<br/>
+<ul>
+  <li *ngFor="let hero of superheroes">{{hero.name}}</li>
+</ul>
