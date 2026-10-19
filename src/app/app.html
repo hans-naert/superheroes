@@ -16,7 +16,7 @@
   </mat-card-content>
 </mat-card>
 <app-superhero-toolbar></app-superhero-toolbar>
-<app-superhero-profile name="Spider-Man"
+<app-superhero-profile (flyWithSuperhero)="onFlyWithSuperhero($event)" name="Spider-Man"
   [firstAppearance]="1962+1"
   lives-in="New York">
   <app-superhero-profile-footer></app-superhero-profile-footer>

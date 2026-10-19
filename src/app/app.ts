@@ -1,4 +1,5 @@
 import { Component, signal } from '@angular/core';
+import { Superhero } from './superheroes-material-design/superhero-profile/superhero-profile';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,9 @@ import { Component, signal } from '@angular/core';
 })
 export class App {
   protected readonly title = signal('superheroes');
+
+onFlyWithSuperhero(event: Superhero): void {
+  console.log('onFlyWithSuperhero', event); 
+}
+
 }

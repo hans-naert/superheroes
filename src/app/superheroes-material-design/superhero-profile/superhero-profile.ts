@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import SuperheroText from '../utilities/superhero-text';
 
 @Component({
@@ -12,6 +12,22 @@ export class SuperheroProfile {
   @Input() name: string = '';
   @Input() firstAppearance=0;
   @Input('lives-in') livesIn: string = '';
+  @Output() flyWithSuperhero = new EventEmitter<Superhero>();
 
+
+  returnSuperhero(): void {
+    const superhero: Superhero = {
+      name: this.name,
+      firstAppearance: this.firstAppearance,
+      livesIn: this.livesIn,
+    };
+    this.flyWithSuperhero.emit(superhero);
+  }
 
 }
+
+export type Superhero = {
+  name: string;
+  firstAppearance: number;
+  livesIn: string;
+};
