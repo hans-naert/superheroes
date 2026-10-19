@@ -9,3 +9,5 @@
 <input type="text" [disabled]="isInputDisabled" placeholder="Name"/>
 <br/>
 <input type="text" (input)="name= $any($event.target).value;" />
+<br/>
+<input type="text" [(ngModel)]="name" />
