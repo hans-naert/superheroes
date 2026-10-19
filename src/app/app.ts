@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { Superhero } from './superheroes-material-design/superhero-profile/superhero-profile';
 
 @Component({
@@ -7,11 +7,15 @@ import { Superhero } from './superheroes-material-design/superhero-profile/super
   styleUrl: './app.scss',
   templateUrl: './app.html',
 })
-export class App {
+export class App implements OnInit {
   protected readonly title = signal('superheroes');
 
 onFlyWithSuperhero(event: Superhero): void {
   console.log('onFlyWithSuperhero', event); 
+}
+
+ngOnInit(): void {
+  console.log('App ngOnInit');
 }
 
 }
