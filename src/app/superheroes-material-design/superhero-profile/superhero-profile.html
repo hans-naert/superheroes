@@ -5,3 +5,7 @@
 <span>Lives in: {{livesIn}} </span>
 <br/>
 <button (click)="returnSuperhero()">Fly with {{name}}</button>
+<br/>
+<input type="text" [disabled]="isInputDisabled" placeholder="Name"/>
+<br/>
+<input type="text" (input)="name= $any($event.target).value;" />

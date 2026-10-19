@@ -14,6 +14,7 @@ export class SuperheroProfile {
   @Input('lives-in') livesIn: string = '';
   @Output() flyWithSuperhero = new EventEmitter<Superhero>();
 
+  isInputDisabled = true;
 
   returnSuperhero(): void {
     const superhero: Superhero = {
